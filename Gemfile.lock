@@ -190,6 +190,7 @@ PLATFORMS
 
 DEPENDENCIES
   rails
+  rake
 
 BUNDLED WITH
    2.5.11
