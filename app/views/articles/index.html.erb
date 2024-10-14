@@ -1,11 +1,15 @@
 <h1>Hello, Rails!</h1>
 <p>Find me in app/views/articles/index.html.erb</p>
 
+Our blog has <%= Article.public_count %> articles and counting!
+
 <ul>
   <% @article.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
